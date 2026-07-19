@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Vibour — dating that starts with personality. Quiz-first matching, private chat, coming soon."
+    />
+    <title>Vibour — Dating that starts with personality</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Vibour home">Vibour</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-brand">
+        <div class="hero-atmosphere" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <h1 id="hero-brand" class="brand reveal">Vibour</h1>
+          <p class="headline reveal reveal-delay-1">Dating that starts with personality.</p>
+          <p class="lede reveal reveal-delay-2">
+            Quizzes and AI compatibility — not ranked looks.
+          </p>
+          <p class="cta reveal reveal-delay-3">
+            <span class="cta-label">Coming soon</span>
+          </p>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2" data-parallax>
+          <img
+            class="phone"
+            src="assets/phone-mock.svg"
+            width="280"
+            height="560"
+            alt="Vibour discovery screen showing an 82% personality match"
+          />
+        </div>
+      </section>
+
+      <section class="section how" aria-labelledby="how-heading">
+        <div class="section-inner">
+          <h2 id="how-heading" class="section-title reveal">How it works</h2>
+          <p class="section-lede reveal">
+            Three steps from first open to a private conversation.
+          </p>
+          <ol class="steps">
+            <li class="step reveal">
+              <span class="step-num" aria-hidden="true">01</span>
+              <h3>Take the quiz pack</h3>
+              <p>Share your humor, values, and vibe before you ever swipe.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step-num" aria-hidden="true">02</span>
+              <h3>Meet your threshold</h3>
+              <p>Discover people who clear a real compatibility bar — not a beauty ranking.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step-num" aria-hidden="true">03</span>
+              <h3>Chat privately</h3>
+              <p>When you match, talk end-to-end encrypted. Only you two can read it.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section different" aria-labelledby="diff-heading">
+        <div class="section-inner">
+          <h2 id="diff-heading" class="section-title reveal">What makes Vibour different</h2>
+          <p class="section-lede reveal">
+            Built for chemistry you can measure and privacy you can trust.
+          </p>
+          <div class="diff-list">
+            <article class="diff reveal">
+              <h3>Personality first</h3>
+              <p>
+                Matching runs on quiz-fed AI embeddings. Compatibility is a threshold filter, not a
+                sorted feed of who looks best.
+              </p>
+            </article>
+            <article class="diff reveal">
+              <h3>Private by design</h3>
+              <p>
+                Signal Protocol encryption on chat. The server sees ciphertext — not your
+                conversations.
+              </p>
+            </article>
+            <article class="diff reveal">
+              <h3>No dating gimmicks</h3>
+              <p>
+                No ads, no rewind, no super likes. Stay SFW with strong photo and text moderation.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand">Vibour</p>
+      <p class="footer-meta">Coming soon · &copy; <span id="year"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

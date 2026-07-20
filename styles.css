@@ -161,7 +161,52 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.15rem;
+}
+
+.platforms {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.platforms-label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(247, 240, 234, 0.72);
+}
+
+.platform-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.platform-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1.05rem;
+  border-radius: 3px;
+  border: 1px solid rgba(247, 240, 234, 0.28);
+  background: rgba(28, 20, 18, 0.35);
+  backdrop-filter: blur(8px);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.platform-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
 }
 
 .btn {
@@ -220,9 +265,13 @@ a.btn-primary:hover {
   }
 
   .cta-group {
-    flex-direction: row;
-    align-items: center;
-    gap: 1.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.15rem;
+  }
+
+  .platforms {
+    gap: 0.8rem;
   }
 
   .hero-photo {

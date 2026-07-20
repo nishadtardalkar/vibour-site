@@ -5,43 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Vibour — dating that starts with personality. Quiz-first matching, private chat, coming soon."
+      content="Vibour — meet people who match your energy. Quiz-first dating with personality matching. Coming soon."
     />
-    <title>Vibour — Dating that starts with personality</title>
+    <meta property="og:title" content="Vibour — Meet people who match your energy" />
+    <meta
+      property="og:description"
+      content="Dating that starts with personality. Quizzes and AI compatibility — not ranked looks."
+    />
+    <meta property="og:type" content="website" />
+    <title>Vibour — Meet people who match your energy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Vibour home">Vibour</a>
+      <a class="wordmark" href="#top" aria-label="Vibour home">
+        <img src="assets/logo-icon-header.png" alt="Vibour" width="722" height="610" />
+      </a>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-brand">
-        <div class="hero-atmosphere" aria-hidden="true"></div>
+        <div class="hero-atmosphere" aria-hidden="true">
+          <img
+            class="hero-photo"
+            src="assets/hero-couple.png"
+            alt=""
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+          />
+          <div class="hero-scrim"></div>
+        </div>
         <div class="hero-copy">
           <h1 id="hero-brand" class="brand reveal">Vibour</h1>
-          <p class="headline reveal reveal-delay-1">Dating that starts with personality.</p>
+          <p class="headline reveal reveal-delay-1">Meet people who match your energy.</p>
           <p class="lede reveal reveal-delay-2">
             Quizzes and AI compatibility — not ranked looks.
           </p>
-          <p class="cta reveal reveal-delay-3">
-            <span class="cta-label">Coming soon</span>
-          </p>
+          <div class="cta-group reveal reveal-delay-3">
+            <span class="btn btn-primary">Coming soon</span>
+            <a class="btn-text" href="#preview">Learn more →</a>
+          </div>
         </div>
-        <div class="hero-visual reveal reveal-delay-2" data-parallax>
-          <img
-            class="phone"
-            src="assets/phone-mock.svg"
-            width="280"
-            height="560"
-            alt="Vibour discovery screen showing an 82% personality match"
-          />
+      </section>
+
+      <section class="section preview" id="preview" aria-labelledby="preview-heading">
+        <div class="section-inner preview-grid">
+          <div class="preview-copy">
+            <h2 id="preview-heading" class="section-title reveal">Personality before the swipe</h2>
+            <p class="section-lede reveal">
+              Discovery starts with vibe and values. Looks come later — if you both clear the bar.
+            </p>
+          </div>
+          <div class="phone-stage reveal reveal-delay-1" data-parallax>
+            <div class="phone-frame" role="img" aria-label="Vibour discovery screen for Elena, 26">
+              <div class="phone-notch" aria-hidden="true"></div>
+              <img
+                class="phone-photo"
+                src="assets/profile-elena.png"
+                alt=""
+                width="750"
+                height="1000"
+              />
+              <div class="phone-chrome">
+                <div class="phone-top">
+                  <span class="phone-menu" aria-hidden="true"></span>
+                  <span class="phone-brand">Vibour</span>
+                  <span class="phone-profile" aria-hidden="true"></span>
+                </div>
+                <div class="phone-meta">
+                  <p class="phone-name">Elena, 26</p>
+                  <p class="phone-vibe">✦ Good conversations. Great adventures.</p>
+                </div>
+                <div class="phone-actions">
+                  <button type="button" class="action-btn action-pass" aria-label="Pass" data-action="pass">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                    </svg>
+                  </button>
+                  <button type="button" class="action-btn action-like" aria-label="Connect" data-action="like">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="phone-flash" aria-hidden="true" data-flash></div>
+            </div>
+          </div>
         </div>
       </section>
 

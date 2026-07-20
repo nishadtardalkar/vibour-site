@@ -26,14 +26,12 @@
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
-  // Hero entrance: mark early reveals visible after first paint
   requestAnimationFrame(() => {
     document.querySelectorAll(".hero .reveal").forEach((el) => {
       el.classList.add("is-visible");
     });
   });
 
-  // Soft parallax on the phone mock
   const parallax = document.querySelector("[data-parallax]");
   if (!reduced && parallax) {
     let ticking = false;
@@ -41,12 +39,34 @@
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
-        const y = window.scrollY;
-        const offset = Math.min(y * 0.12, 48);
-        parallax.style.transform = `translate3d(0, ${offset}px, 0)`;
+        const rect = parallax.getBoundingClientRect();
+        const view = window.innerHeight;
+        const progress = (view - rect.top) / (view + rect.height);
+        const offset = (progress - 0.5) * 36;
+        parallax.style.transform = `translate3d(0, ${offset.toFixed(2)}px, 0)`;
         ticking = false;
       });
     };
     window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
+
+  const flash = document.querySelector("[data-flash]");
+  document.querySelectorAll("[data-action]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const action = btn.getAttribute("data-action");
+      btn.classList.remove("is-pulse");
+      void btn.offsetWidth;
+      btn.classList.add("is-pulse");
+
+      if (flash) {
+        flash.classList.remove("is-like", "is-pass");
+        void flash.offsetWidth;
+        flash.classList.add(action === "like" ? "is-like" : "is-pass");
+        window.setTimeout(() => {
+          flash.classList.remove("is-like", "is-pass");
+        }, 420);
+      }
+    });
+  });
 })();
